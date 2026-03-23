@@ -1,8 +1,70 @@
-/*
+.pandoc-fenced-div-part {
+    --custom-div-border: 1px solid var(--background-modifier-border);
+    --custom-div-bg: var(--background-primary-alt);
+    --custom-div-radius: 8px;
+    background-color: var(--custom-div-bg);
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.pandoc-fenced-div-start {
+    border-top: var(--custom-div-border);
+    border-left: var(--custom-div-border);
+    border-right: var(--custom-div-border);
+    border-top-left-radius: var(--custom-div-radius);
+    border-top-right-radius: var(--custom-div-radius);
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 0 !important;
+}
 
-If your plugin does not need CSS, delete this file.
+.pandoc-fenced-div-start::before {
+    content: attr(data-div-class);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
 
-*/
+.pandoc-fenced-div-middle {
+    border-left: var(--custom-div-border);
+    border-right: var(--custom-div-border);
+    padding: 0 1rem;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.pandoc-fenced-div-end {
+    border-bottom: var(--custom-div-border);
+    border-left: var(--custom-div-border);
+    border-right: var(--custom-div-border);
+    border-bottom-left-radius: var(--custom-div-radius);
+    border-bottom-right-radius: var(--custom-div-radius);
+    padding: 0 1rem 1rem 1rem;
+    margin-top: 0 !important;
+}
+
+.pandoc-fenced-div-single {
+    border: var(--custom-div-border);
+    border-radius: var(--custom-div-radius);
+    padding: 1rem;
+}
+
+.pandoc-fenced-div-single::before {
+    content: attr(data-div-class);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.pandoc-fenced-div-raw-text {
+    display: none;
+}
+
+/* Editor Live Preview / Source Mode Styles */
+.pandoc-fenced-div-editor-mark {
+    font-weight: bold;
+    color: var(--text-accent);
+}
+
+.pandoc-fenced-div-editor-line {
+    border-left: 2px solid var(--background-modifier-border);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+}
