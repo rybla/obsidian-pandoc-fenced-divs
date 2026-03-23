@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-pandoc-fenced-divs",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "This plugin allows you to use Pandoc-style fenced divs in Obsidian.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
